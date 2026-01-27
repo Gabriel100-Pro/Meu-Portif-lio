@@ -174,12 +174,122 @@ nav a{
   50% { opacity: 0; }
 }
 
+.sobre {
+    width: 100%;
+    height: auto;
+    padding: 0 80px;
+    margin-top: 40px;
+}
+
+
 .about {
     width: 100%;
     text-align: center;
     margin: 80px 0 40px 0;
 }
 
+.sobremim {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sobremim p{
+    color: #ccc;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.textos{
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    width: 40%;
+    min-width: 280px;
+}
+
+.box{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 600px;
+}
+.text-about-my{
+    width: 40%;
+    min-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    border: solid 1px #c77dff;
+}
+
+.text-about-my h2{
+    color: white;
+    font-size: 26px;
+    font-family: "Orbitron  ", sans-serif;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.text-about-my .introducao {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+.text-about-my .apresentation {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    height: auto;
+}
+
+.minha-jornada {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: "Georgia", sans-serif;
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 8px;
+    color: #54c7ee;
+    font-style: italic;
+    
+    left: 0px;
+}
+
+.quote-box {
+    position: relative;
+    /* necessário para posicionar o ::before */
+    padding-left: 18px;
+    /* espaço entre a linha e o texto */
+    font-family: Georgia, serif;
+    color: white;
+    margin-top: 50px;
+}
+
+.quote-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    /* altura da linha */
+    width: 4px;
+    /* espessura */
+    background-color: #bb00ff;
+    /* cor da linha */
+    border-radius: 2px;
+    /* arredondamento igual da imagem */
+}
 .section-title {
     position: relative;
     display: inline-block;
@@ -227,11 +337,7 @@ nav a{
     font-family: "Inter", sans-serif;
 }
 
-.textos{
-    display: flex;
-    flex-direction: column;
-    display: inline-block;
-}
+
 
 .qualidades {
     margin-top: 8px;
@@ -349,11 +455,54 @@ nav a{
 
 /* Responsivo */
 
+@media (max-width: 1130px) {
 
-
-
-@media (max-width: 1000px) {
     header{
+        display: none;
+    }
+    .sobre {
+        padding: 0 20px;
+    }
+
+    .sobremim {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textos {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .text-about-my {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .section-title::before,
+    .section-title::after {
+        display: none;
+    }
+
+    .introducao{
+         padding: 0px 20px 0px 20px
+    }
+    .apresentation{
+        padding: 0px 20px 0px 20px;
+    }
+
+    .quote-box{
+        margin-top: auto;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .quote-box::before{
         display: none;
     }
    
@@ -398,5 +547,7 @@ nav a{
         justify-content: center;
         gap: 10px;
     }
+
+
 
 }
