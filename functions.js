@@ -139,7 +139,7 @@ document.getElementById("downloadCV").addEventListener("click", function () {
     setTimeout(() => {
         document.getElementById("spinner").style.display = "none";
         document.getElementById("successBox").style.display = "flex";
-    }, 2000); // tempo curto, só feedback visual
+    }, 1000); // tempo curto, só feedback visual
 });
 
 document.getElementById("okBtn").addEventListener("click", function () {

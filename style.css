@@ -57,9 +57,8 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    gap: 70px;
-    list-style-type: none;
+    position: relative;
+    right: 100%;
 }
 
 nav a {
@@ -662,10 +661,11 @@ nav a:hover {
     font-size: 14px;
     font-weight: 600;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .card-footer button:hover:not(:disabled) {
-    background: linear-gradient(135deg, #54c7ee, #9b59b6);
+   background: linear-gradient(rgba(0, 136, 255, 0.621), rgba(0, 132, 255, 0.379));
     color: #ffffff;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(84, 199, 238, 0.4);
@@ -962,6 +962,7 @@ nav a:hover {
     .wrapper {
         flex-direction: column;
         height: auto;
+        margin-top: 100px;
     }
 
 
@@ -970,7 +971,7 @@ nav a:hover {
         margin: 0;
         padding: 0;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 100px;
     }
 
     .container-left h1 {
