@@ -42,19 +42,6 @@ typeEffect();
 window.addEventListener("load", () => {
 
   // Código digitando
-  const codeText = `console.log("Hello, world!");`;
-  const codeEl = document.getElementById("typing-code");
-  let i = 0;
-
-  function typeCode() {
-    if (i < codeText.length) {
-      codeEl.textContent += codeText.charAt(i++);
-      setTimeout(typeCode, 15);
-    }
-  }
-
-  typeCode();
-
   // Texto do portfólio digitando
   const elements = document.querySelectorAll(".typing");
   let index = 0;
@@ -89,24 +76,78 @@ window.addEventListener("load", () => {
 });
 
 
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+const menuBackdrop = document.getElementById('menu-backdrop');
+const navLinks = navMenu.querySelectorAll('a');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('mobile-open');
+  menuBackdrop.classList.toggle('active');
+});
+
+// Fechar o menu quando um link é clicado
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('mobile-open');
+    menuBackdrop.classList.remove('active');
+  });
+});
+
+// Fechar o menu quando clicar no backdrop
+menuBackdrop.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('mobile-open');
+  menuBackdrop.classList.remove('active');
+});
+
+// Fechar o menu quando clicar fora
+document.addEventListener('click', (event) => {
+  if (!hamburger.contains(event.target) && !navMenu.contains(event.target) && !menuBackdrop.contains(event.target)) {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('mobile-open');
+    menuBackdrop.classList.remove('active');
+  }
+});
+
 function revealOnScroll() {
-    const reveals = document.querySelectorAll('.reveal');
-    const windowHeight = window.innerHeight;
-    const revealPoint = 100;
+  const reveals = document.querySelectorAll('.reveal');
+  const windowHeight = window.innerHeight;
+  const revealPoint = 100;
 
-    reveals.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
+  reveals.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
 
-        if (elementTop < windowHeight - revealPoint) {
-            element.classList.add('active');
-        } else {
-            element.classList.remove('active');
-        }
-    });
+    if (elementTop < windowHeight - revealPoint) {
+      element.classList.add('active');
+    } else {
+      element.classList.remove('active');
+    }
+  });
 }
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
+
+
+document.getElementById("downloadCV").addEventListener("click", function () {
+    document.getElementById("spinner").style.display = "flex";
+
+    setTimeout(() => {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("successBox").style.display = "flex";
+    }, 2000); // tempo curto, só feedback visual
+});
+
+document.getElementById("okBtn").addEventListener("click", function () {
+    document.getElementById("successBox").style.display = "none";
+});
+
+
+
 
 
 
