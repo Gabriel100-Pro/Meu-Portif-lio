@@ -58,7 +58,7 @@ nav {
 
 nav ul {
     position: relative;
-    right: 100%;
+    left: 50%; /* corrigido: evita deslocar os links para fora da tela */
 }
 
 nav a {
@@ -141,7 +141,7 @@ nav a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 70%;
     max-width: 300px;
     height: 100vh;
     background: linear-gradient(180deg, #0a0a19, #1a1a2e);
@@ -152,12 +152,12 @@ nav a:hover {
     transition: transform 0.3s ease;
     display: flex !important;
     flex-direction: column;
-    padding-top: 20px;
+    
     overflow-y: auto;
 }
 
 #nav-menu {
-    transform: translateX(-100%);
+    transform: translateX(0); /* padrão: visível em desktop */
     transition: transform 0.3s ease;
 }
 
@@ -375,7 +375,7 @@ nav a:hover {
     
     width: 100%;
     text-align: center;
-    margin-top: 50px;
+   
 }
 
 
@@ -835,6 +835,7 @@ nav a:hover {
 
     #nav-menu {
         display: none !important;
+        transform: translateX(-100%); /* escondido por padrão no mobile */
     }
 
     #nav-menu.mobile-open {
@@ -962,7 +963,7 @@ nav a:hover {
     .wrapper {
         flex-direction: column;
         height: auto;
-        margin-top: 100px;
+        
     }
 
 
@@ -971,7 +972,7 @@ nav a:hover {
         margin: 0;
         padding: 0;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 140px;
     }
 
     .container-left h1 {
