@@ -1,7 +1,7 @@
 <h1 align="center">🚀 Portfólio - Gabriel Carlos</h1>
 
 <p align="center">
-Desenvolvedor Frontend | Estudante de Ciência da Computação
+Desenvolvedor Frontend - Júnior 
 </p>
 
 <hr>
@@ -29,9 +29,13 @@ O projeto foi construído com foco em:
 
 <h2>🖥️ Preview do Projeto</h2>
 
-<p align="center">
-  <img src="./preview.png" alt="Preview do Portfólio" width="800">
-</p>
+<div align="center">
+  <img 
+    src="./assets/img-mockup%20responsivo.png" 
+    width="90%" 
+    style="border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.25);" 
+  />
+</div>
 
 <p align="center">
 <em>Versão Desktop e Mobile</em>
@@ -109,7 +113,7 @@ Inclui menu hambúrguer para dispositivos móveis e layout adaptável com media 
 
 <p>
 Este portfólio foi desenvolvido para consolidar meus conhecimentos em Frontend 
-e servir como vitrine profissional para recrutadores e empresas.
+e servir como vitrine profissional.
 </p>
 
 <hr>
